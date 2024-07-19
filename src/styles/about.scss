@@ -1,234 +1,234 @@
 .about {
-      overflow: hidden;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  flex: 1 0 0px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 96px;
+  height: 600px;
+  justify-content: flex-start;
+  max-width: 1168px;
+  overflow: visible;
+  padding: 0 24px;
+  top: 0;
+  width: 1120px;
+  will-change: transform;
+  z-index: 1;
+  margin: auto;
+  .about-hero {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 32px;
+    height: auto;
+    justify-content: flex-start;
+    overflow: visible;
+    // padding: 0 0 0 48px;
+    position: relative;
+    width: 566px;
+    z-index: 10;
+    > .about-info {
       align-items: center;
       display: flex;
-      flex: 1 0 0px;
-      flex-direction: row;
+      flex: none;
+      flex-direction: column;
       flex-wrap: nowrap;
-      gap: 96px;
-      height: 600px;
+      gap: 20px;
+      height: min-content;
       justify-content: flex-start;
-      max-width: 1168px;
-      overflow: visible;
-      padding: 0 24px;
-      top: 0;
-      width: 1120px;
-      will-change: transform;
-      z-index: 1;
-      margin: auto;
-      .about-hero {
-        align-items: start;
+      overflow: hidden;
+      padding: 0;
+      position: relative;
+      width: 100%;
+
+      .title-header {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 32px;
-        height: auto;
-        justify-content: flex-start;
-        overflow: visible;
-        // padding: 0 0 0 48px;
-        position: relative;
-        width: 566px;
-        z-index: 10;
-        > .about-info {
-          align-items: center;
-          display: flex;
-          flex: none;
-          flex-direction: column;
-          flex-wrap: nowrap;
-          gap: 20px;
-          height: min-content;
-          justify-content: flex-start;
-          overflow: hidden;
-          padding: 0;
-          position: relative;
-          width: 100%;
-    
-          .title-header {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-    
-            h5 {
-              width: 253px;
-              color: #a2e435;
-              border: 1px solid #faf9f7;
-              padding: 5px 10px;
-              border-radius: 28px;
-            }
-    
-            h1 {
-              width: 100%;
-              font-size: 48px;
-              color: #faf9f7;
-              font-weight: 400;
-            }
-    
-            p {
-              font-size: 16px;
-              color: #303030;
-              width: 512px;
-              font-weight: 600;
-            }
-          }
-    
-        
-        }
-        > button {
-          width: 120px;
-          padding: 15px 25px;
-          font-size: 16px;
-          color: #fff;
-          border: none;
+        gap: 16px;
+
+        h5 {
+          width: 253px;
+          color: #a2e435;
+          border: 1px solid #faf9f7;
+          padding: 5px 10px;
           border-radius: 28px;
-          cursor: pointer;
-          align-self: flex-start;
-          background-color: #000;
+        }
+
+        h1 {
+          width: 100%;
+          font-size: 48px;
+          color: #faf9f7;
+          font-weight: 400;
+        }
+
+        p {
+          font-size: 16px;
+          color: #303030;
+          width: 512px;
+          font-weight: 600;
         }
       }
-      > .image {
-        width: 1120px;
-        margin: auto;
-        img {
-          width: 1120px;
-          height: 600px;
-          position: absolute;
-          top: 0;
-          z-index: 0;
-          filter: grayscale(0.3h);
-          right: 0;
+
+    
+    }
+    > button {
+      width: 120px;
+      padding: 15px 25px;
+      font-size: 16px;
+      color: #fff;
+      border: none;
+      border-radius: 28px;
+      cursor: pointer;
+      align-self: flex-start;
+      background-color: #000;
+    }
+  }
+  > .image {
+    width: 1120px;
+    margin: auto;
+    img {
+      width: 1120px;
+      height: 600px;
+      position: absolute;
+      top: 0;
+      z-index: 0;
+      filter: grayscale(0.3h);
+      right: 0;
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .about {
+    overflow-x: hidden;
+    padding: 48px 16px 96px;
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    .about-hero {
+      width: 92.5vw;
+      height: 260px;
+
+      > .about-info {
+        width: 92.5vw;
+        height: 184px;
+
+        .title-header {
+          width: 92.5vw;
+          h5 {
+            font-size: 16px;
+            width: 75vw;
+            padding-bottom: 5px;
+            height: 30px;
+          }
+          h1 {
+            width: 95vw;
+            font-size: 36px;
+          }
         }
+      }
+      button {
+        width: 110px;
+        padding: 10px 24px;
+        font-size: 16px;
+        background-color: #fff;
+        color:#000;
+        font-size: 16px;
+        border: none;
+        border-radius: 28px;
+        cursor: pointer;
+        align-self: flex-start; /* Ensure it aligns to the start of the flex container */
       }
     }
-    
-    @media (max-width: 440px) {
-      .about {
-        overflow-x: hidden;
-        padding: 48px 16px 96px;
-        width: 100vw;
-        flex-direction: column;
-        height: auto;
+    > .image {
+      object-fit: cover;
+      width: 92.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      img {
+      width: 170%;
+      // overflow: hidden;
+      position: absolute;
+      height: 100%;
+        object-fit: cover;
         position: relative;
-        .about-hero {
+     left: -130px;
+        z-index: 1;
+        filter: grayscale(0.3h);
+        right: 0;
+      }
+    }
+  }
+}
+@media (min-device-width: 440px) and (max-device-width: 768px) { 
+  .about {
+    padding: 48px 16px 96px;
+    width: 100vw;
+    flex-direction: column;
+    height: auto;
+    position: relative;
+    .about-hero {
+      width: 92.5vw;
+      height: 260px;
+
+      > .about-info {
+        width: 92.5vw;
+        height: 184px;
+
+        .title-header {
           width: 92.5vw;
-          height: 260px;
-    
-          > .about-info {
-            width: 92.5vw;
-            height: 184px;
-    
-            .title-header {
-              width: 92.5vw;
-              h5 {
-                font-size: 16px;
-                width: 69vw;
-                padding-bottom: 5px;
-                height: 30px;
-              }
-              h1 {
-                width: 95vw;
-                font-size: 36px;
-              }
-            }
-          }
-          button {
-            width: 110px;
-            padding: 10px 24px;
+          h5 {
             font-size: 16px;
-            background-color: #fff;
-            color:#000;
-            font-size: 16px;
-            border: none;
-            border-radius: 28px;
-            cursor: pointer;
-            align-self: flex-start; /* Ensure it aligns to the start of the flex container */
+            width: 76vw;
+            padding-bottom: 5px;
+            height: 30px;
           }
-        }
-        > .image {
-          object-fit: cover;
-          width: 92.5vw;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          overflow: hidden;
-          img {
-          width: 170%;
-          // overflow: hidden;
-          position: absolute;
-          height: 100%;
-            object-fit: cover;
-            position: relative;
-         left: -130px;
-            z-index: 1;
-            filter: grayscale(0.3h);
-            right: 0;
+          h1 {
+            width: 95vw;
+            font-size: 36px;
           }
         }
       }
+      button {
+        width: 110px;
+        padding: 10px 24px;
+        font-size: 16px;
+        background-color: #fff;
+        color:#000;
+        font-size: 16px;
+        border: none;
+        border-radius: 28px;
+        cursor: pointer;
+        align-self: flex-start; /* Ensure it aligns to the start of the flex container */
+      }
     }
-    @media (min-device-width: 440px) and (max-device-width: 768px) { 
-      .about {
-        padding: 48px 16px 96px;
-        width: 100vw;
-        flex-direction: column;
-        height: auto;
+    > .image {
+      object-fit: cover;
+      width: 92.5vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      img {
+      width: 170%;
+      // overflow: hidden;
+      position: absolute;
+      height: 100%;
+        object-fit: cover;
         position: relative;
-        .about-hero {
-          width: 92.5vw;
-          height: 260px;
-    
-          > .about-info {
-            width: 92.5vw;
-            height: 184px;
-    
-            .title-header {
-              width: 92.5vw;
-              h5 {
-                font-size: 16px;
-                width: 69vw;
-                padding-bottom: 5px;
-                height: 30px;
-              }
-              h1 {
-                width: 95vw;
-                font-size: 36px;
-              }
-            }
-          }
-          button {
-            width: 110px;
-            padding: 10px 24px;
-            font-size: 16px;
-            background-color: #fff;
-            color:#000;
-            font-size: 16px;
-            border: none;
-            border-radius: 28px;
-            cursor: pointer;
-            align-self: flex-start; /* Ensure it aligns to the start of the flex container */
-          }
-        }
-        > .image {
-          object-fit: cover;
-          width: 92.5vw;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          position: relative;
-          overflow: hidden;
-          img {
-          width: 170%;
-          // overflow: hidden;
-          position: absolute;
-          height: 100%;
-            object-fit: cover;
-            position: relative;
-         left: -130px;
-            z-index: 1;
-            filter: grayscale(0.3h);
-            right: 0;
-          }
-        }
+     left: -130px;
+        z-index: 1;
+        filter: grayscale(0.3h);
+        right: 0;
       }
     }
+  }
+}
