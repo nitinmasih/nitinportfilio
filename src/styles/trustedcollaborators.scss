@@ -1,0 +1,149 @@
+.trusted-collab {
+      align-items: center;
+      display: flex;
+      flex: none;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 96px;
+      height: auto;
+      justify-content: flex-start;
+      width: 1168px;
+      overflow: hidden;
+      padding: 112px 24px;
+      margin: auto;
+      position: relative;
+    
+      > .heading {
+        width: 560px;
+        height: 105px;
+        text-align: center;
+    
+        h1 {
+          line-height: 110%;
+          letter-spacing: 0.01em;
+          font-size: 48px;
+          font-weight: 400;
+        }
+      }
+    
+      .collaborator-logo { /* corrected class name */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 1120px;
+    
+        .collaborator-item {
+          flex: 1 1 calc(50% - 28px); /* Adjust the calculation based on your gap */
+          display: flex;
+          justify-content: center;
+          margin-bottom: 28px; /* Adjust as needed */
+        }
+    
+        img {
+          width: 250px;
+          height: 250px;
+          margin: 15px;
+          border-radius: 24px;
+          cursor: pointer;
+    
+          &:hover {
+            filter: invert(0.2);
+            border: 1px solid aliceblue;
+          }
+        }
+      }
+    }
+    
+    
+    @media (max-width: 440px) {
+      .trusted-collab {
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 64px;
+        height: auto;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 96px 16px;
+        position: relative;
+        > .heading {
+          width: 80vw;
+          height: 80px;
+          margin: auto;
+          > h1 {
+            font-size: 36px;
+          }
+        }
+        .collaborator-logo {
+          width: 93vw;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 28px; // Adjust gap as needed
+      
+          .collaborator-item {
+            flex: 1 1 calc(50% - 28px); // Adjust the calculation based on your gap
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px; // Adjust as needed
+          }
+      
+    
+          
+        }
+      }
+    }
+    @media (min-width:440px) and (max-width: 770px) {
+      .trusted-collab {
+        width: 100vw;
+        align-items: center;
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 64px;
+        height: auto;
+        justify-content: flex-start;
+        overflow: hidden;
+        padding: 96px 16px;
+        position: relative;
+        > .heading {
+          width: 80vw;
+          height: 80px;
+          margin: auto;
+          > h1 {
+            font-size: 36px;
+          }
+        }
+        .collaborator-logo {
+          width: 93vw;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 28px; // Adjust gap as needed
+      
+          .collaborator-item {
+            flex: 1 1 calc(50% - 28px); // Adjust the calculation based on your gap
+            display: flex;
+            justify-content: center;
+            margin-bottom: 28px; // Adjust as needed
+          }
+      
+    
+          
+        }
+      }
+    }
+    

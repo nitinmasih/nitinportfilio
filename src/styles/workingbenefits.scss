@@ -1,0 +1,179 @@
+.work-benefit {
+      place-content: flex-start;
+      align-items: flex-start;
+      display: flex;
+      flex: 0 0 auto;
+      flex-flow: row;
+      gap: 96px;
+      height: auto;
+      max-width: 1168px;
+      overflow: visible;
+      padding: 112px 24px;
+      position: relative;
+      width: 100%;
+      margin: auto;
+    
+      .work-left-aside {
+        align-items: flex-start;
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: column;
+        gap: 20px;
+        height: min-content;
+        // overflow: hidden;
+        padding: 0px;
+        position: sticky;
+        top: 160px;
+        width: 35%;
+        will-change: transform;
+        z-index: 1;
+    
+        h1 {
+          font-size: 48px;
+          line-height: 110%;
+          font-weight: 400;
+        }
+        p {
+          line-height: 140%;
+          font-weight: 400;
+          color: #817b6f;
+        }
+      }
+      .work-right-aside {
+        align-items: flex-start;
+        display: flex;
+        flex: 1 0 0px;
+        flex-flow: column;
+        gap: 96px;
+        height: auto;
+        overflow: hidden;
+        padding: 0px;
+        position: relative;
+    
+        > .number-work-info {
+          align-items: flex-start;
+          display: flex;
+          flex: 0 0 auto;
+          flex-flow: row;
+          gap: 48px;
+          height: auto;
+          // overflow: hidden;
+          padding: 0px;
+          position: relative;
+          width: 100%;
+    
+          > .number {
+            > h1 {
+              font-size: 72px;
+              line-height: 100%;
+              font-weight: 400;
+              letter-spacing: 0.01em;
+              text-align: start;
+            }
+          }
+          > .work-info {
+            place-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex: 1 0 0px;
+            flex-flow: column;
+            gap: 20px;
+            height: min-content;
+            // overflow: hidden;
+            padding: 0px;
+            position: relative;
+            > .title {
+              width: 520px;
+              height: 62.6px;
+              padding: 3px 0 20px;
+              h2 {
+                font-size: 36px;
+                color: #faf9f7;
+              }
+            }
+            > hr {
+              width: 100%;
+              opacity: 0.3;
+            }
+            > p {
+              line-height: 140%;
+              color: #817b6f;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 440px) {
+      .work-benefit {
+        flex-direction: column;
+        padding: 112px 16px;
+        width: 100vw;
+    
+        .work-left-aside {
+          padding: 0px;
+          position: static;
+    
+          width: 100%;
+          .heading {
+            display: flex;
+            width: 100%;
+            gap: 15px;
+          }
+          h1 {
+            font-size: 36px;
+            line-height: 110%;
+            font-weight: 400;
+          }
+          p {
+            line-height: 140%;
+            font-weight: 400;
+            color: #817b6f;
+          }
+        }
+        .work-right-aside {
+          > .number-work-info {
+            gap: 24px;
+            height: 149px;
+            display: flex;
+            
+    
+            > .number {
+              > h1 {
+                font-size: 72px;
+                line-height: 100%;
+                font-weight: 400;
+                letter-spacing: 0.01em;
+                text-align: start;
+                padding-top: 6px;
+              }
+            }
+            > .work-info {
+              padding: 0px;
+              position: relative;
+              width: 72vw;
+              > .title {
+                width: 520px;
+                height: 62.6px;
+                padding: 3px 0 20px;
+                h2 {
+                 
+                  font-size: 36px;
+                  color: #faf9f7;
+                }
+              }
+              > hr {
+                width: 100%;
+                opacity: 0.3;
+              }
+              > p {
+                height: auto;            
+                line-height: 140%;
+    
+                color: #817b6f;
+              }
+            }
+          }
+        }
+      }
+    }
+    

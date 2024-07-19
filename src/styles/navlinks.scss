@@ -1,0 +1,548 @@
+* {
+      box-sizing: border-box;
+    }
+    
+    .navlinks {
+      position: fixed;
+      top: 0;
+      z-index: 1001;
+      background-color: black;
+      color: white;
+      width: 100vw;
+      height: 100vh;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+      * {
+        box-sizing: border-box;
+        margin: 0; /* Reset default margins */
+        padding: 0; /* Reset default padding */
+      }
+      
+      .navlinks {
+        position: fixed;
+        top: 0;
+        z-index: 1001;
+        background-color: black;
+        color: white;
+        width: 100vw; /* Ensure full viewport width */
+        height: 100vh;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-y: auto; /* Allow vertical scrolling */
+      
+        .links {
+          margin-top: 70px;
+          border-top: 1px solid rgba(235, 243, 250, 0.4);
+          width: 100%;
+          max-width: 100%; /* Prevent overflow */
+          
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+      
+          > .home-about,
+          .project-article {
+            display: flex;
+            width: 100%;
+            height: 124px;
+      
+            .home,
+            .project {
+              display: flex;
+              align-items: center;
+              padding-left: 220px;
+              font-size: 22px;
+              width: 50%;
+              border-right: 1px solid rgba(235, 243, 250, 0.4);
+              max-width: 100%; /* Prevent overflow */
+            }
+      
+            .abouts,
+            .article {
+              padding: 50px 100px;
+              font-size: 22px;
+              width: 50%;
+              max-width: 100%; /* Prevent overflow */
+            }
+          }
+      
+          .project-article,
+          .office-follow {
+            border-top: 1px solid rgba(235, 243, 250, 0.4);
+            border-right: 1px solid rgba(235, 243, 250, 0.4);
+          }
+      
+          .office-follow {
+            padding-top: 40px;
+            height: auto;
+            display: flex;
+      
+            .office {
+              display: flex;
+              flex-direction: column;
+              align-items: start;
+              justify-content: center;
+              padding-left: 220px;
+              width: 50%;
+              max-width: 100%; /* Prevent overflow */
+      
+              h2 {
+                font-size: 16px;
+              }
+      
+              .address {
+                display: flex;
+                gap: 15px;
+                padding-top: 10px;
+      
+                p {
+                  line-height: 140%;
+                  letter-spacing: 0.1em;
+                  font-size: 14px;
+                }
+              }
+            }
+      
+            .follow {
+              padding-left: 100px;
+      
+              .follow-icons {
+                display: flex;
+                gap: 35px;
+                padding-top: 20px;
+      
+                img {
+                  width: 20px;
+                  height: 20px;
+                  border-radius: 50%;
+                  &:hover {
+                    transform: scale(1.2);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .navlinks {
+          .links {
+            > .home-about,
+            .project-article {
+              .home,
+              .project {
+                padding-left: 20px;
+                font-size: 20px;
+              }
+      
+              .abouts,
+              .article {
+                padding: 50px 20px;
+                font-size: 20px;
+              }
+            }
+      
+            .project-article,
+            .office-follow {
+              border-right: 0;
+              font-size: 20px;
+            }
+      
+            .office-follow {
+              display: flex;
+              flex-direction: column;
+              gap: 25px;
+      
+              .office {
+                padding-left: 20px;
+                width: 100%;
+                max-width: 100%; /* Prevent overflow */
+      
+                h2 {
+                  font-size: 16px;
+                }
+      
+                .address {
+                  gap: 10px;
+                  p {
+                    line-height: 140%;
+                    letter-spacing: 0.1em;
+                    font-size: 14px;
+                  }
+                }
+              }
+      
+              .follow {
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .navlinks {
+          .links {
+            > .home-about,
+            .project-article {
+              .home,
+              .project {
+                padding-left: 20px;
+                font-size: 18px;
+              }
+      
+              .abouts,
+              .article {
+                padding: 50px 20px;
+                font-size: 18px;
+              }
+            }
+      
+            .project-article,
+            .office-follow {
+              border-right: 0;
+            }
+      
+            .office-follow {
+              display: flex;
+              flex-direction: column;
+              gap: 25px;
+      
+              .office {
+                padding-left: 20px;
+                width: 100%;
+                max-width: 100%; /* Prevent overflow */
+      
+                h2 {
+                  font-size: 16px;
+                }
+      
+                .address {
+                  gap: 5px;
+                  p {
+                    line-height: 140%;
+                    letter-spacing: 0.1em;
+                    font-size: 14px;
+                  }
+                }
+              }
+      
+              .follow {
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+      
+      @media (max-width: 370px) {
+        .navlinks {
+          width: 100vw; /* Ensure full width for smaller screens */
+          .links {
+            > .home-about,
+            .project-article {
+              .home,
+              .project {
+                padding-left: 20px;
+                font-size: 18px;
+              }
+      
+              .abouts,
+              .article {
+                padding: 50px 20px;
+                font-size: 18px;
+              }
+            }
+      
+            .project-article,
+            .office-follow {
+              border-right: 0;
+            }
+      
+            .office-follow {
+              display: flex;
+              flex-direction: column;
+              gap: 25px;
+      
+              .office {
+                padding-left: 20px;
+                width: 100%;
+                max-width: 100%; /* Prevent overflow */
+      
+                h2 {
+                  font-size: 16px;
+                }
+      
+                .address {
+                  p {
+                    line-height: 140%;
+                    letter-spacing: 0.1em;
+                    font-size: 14px;
+                  }
+                }
+              }
+      
+              .follow {
+                padding-left: 20px;
+              }
+            }
+          }
+        }
+      }
+      
+      .links {
+        margin-top: 70px;
+        border-top: 1px solid rgba(235, 243, 250, 0.4);
+    
+        a {
+          text-decoration: none;
+          color: #fff;
+        }
+    
+        > .home-about,
+        .project-article {
+          display: flex;
+          width: 100%;
+          height: 124px;
+    
+          .home,
+          .project {
+            display: flex;
+            align-items: center;
+            padding-left: 220px;
+            font-size: 22px;
+            width: 50%;
+            border-right: 1px solid rgba(235, 243, 250, 0.4);
+          }
+    
+          .abouts,
+          .article {
+            padding: 50px 100px;
+            font-size: 22px;
+            width: 50%;
+          }
+        }
+    
+        .project-article,
+        .office-follow {
+          border-top: 1px solid rgba(235, 243, 250, 0.4);
+          border-right: 1px solid rgba(235, 243, 250, 0.4);
+        }
+    
+        .office-follow {
+          padding-top: 40px;
+          height: auto;
+          display: flex;
+    
+          .office {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            padding-left: 220px;
+            width: 50%;
+    
+            h2 {
+              font-size: 16px;
+            }
+    
+            .address {
+              display: flex;
+              gap: 15px;
+              padding-top: 10px;
+    
+              p {
+                line-height: 140%;
+                letter-spacing: 0.1em;
+                font-size: 14px;
+              }
+            }
+          }
+    
+          .follow {
+            padding-left: 100px;
+    
+            .follow-icons {
+              display: flex;
+              gap: 35px;
+              padding-top: 20px;
+    
+              img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                &:hover {
+                  transform: scale(1.2); /* Corrected property */
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .navlinks {
+        .links {
+          > .home-about,
+          .project-article {
+            .home,
+            .project {
+              padding-left: 20px;
+              font-size: 20px;
+            }
+    
+            .abouts,
+            .article {
+              padding: 50px 20px;
+              font-size: 20px;
+            }
+          }
+    
+          .project-article,
+          .office-follow {
+            border-right: 0;
+            font-size: 20px;
+          }
+    
+          .office-follow {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+    
+            .office {
+              padding-left: 20px;
+              width: 100%;
+    
+              h2 {
+                font-size: 16px;
+              }
+    
+              .address {
+                gap: 80px;
+    
+                p {
+                  line-height: 140%;
+                  letter-spacing: 0.1em;
+                  font-size: 14px;
+                }
+              }
+            }
+    
+            .follow {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .navlinks {
+        .links {
+          > .home-about,
+          .project-article {
+            .home,
+            .project {
+              padding-left: 20px;
+              font-size: 18px;
+            }
+    
+            .abouts,
+            .article {
+              padding: 50px 20px;
+              font-size: 18px;
+            }
+          }
+    
+          .project-article,
+          .office-follow {
+            border-right: 0;
+          }
+    
+          .office-follow {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+    
+            .office {
+              padding-left: 20px;
+              width: 100%;
+    
+              h2 {
+                font-size: 16px;
+              }
+    
+              .address {
+                gap: 5px;
+    
+                p {
+                  line-height: 140%;
+                  letter-spacing: 0.1em;
+                  font-size: 14px;
+                }
+              }
+            }
+    
+            .follow {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 370px) {
+      .navlinks {
+        width: 100vw; /* Ensure full width for smaller screens */
+        .links {
+          > .home-about,
+          .project-article {
+            .home,
+            .project {
+              padding-left: 20px;
+              font-size: 18px;
+            }
+    
+            .abouts,
+            .article {
+              padding: 50px 20px;
+              font-size: 18px;
+            }
+          }
+    
+          .project-article,
+          .office-follow {
+            border-right: 0;
+          }
+    
+          .office-follow {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+    
+            .office {
+              padding-left: 20px;
+              width: 100%;
+    
+              h2 {
+                font-size: 16px;
+              }
+    
+              .address {
+                p {
+                  line-height: 140%;
+                  letter-spacing: 0.1em;
+                  font-size: 14px;
+                }
+              }
+            }
+    
+            .follow {
+              padding-left: 20px;
+            }
+          }
+        }
+      }
+    }
+    

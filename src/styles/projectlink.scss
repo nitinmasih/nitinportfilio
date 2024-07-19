@@ -1,0 +1,217 @@
+.projects {
+      height: auto;
+      margin: auto;
+      width: 1168px;
+    
+      > .project-header,
+      > .project-templates{
+        width: 1168px;
+        margin: auto;
+      }
+    
+      > .project-header {
+        padding: 96px 24px 0;
+        height: 377px;
+    
+        > .project-heading {
+          width: 1120px;
+          padding: 0 0 96px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 18px;
+          border-bottom: 1px solid rgba(173, 168, 159, 0.3);
+    
+          > div {
+            display: flex;
+            font-size: 72px;
+          }
+        }
+      }
+    
+      > .project-templates {
+        padding: 96px 24px 112px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+    
+        > .project-temp {
+          > img {
+            width: 544px;
+            height: 306px;
+            border-radius: 24px;
+            cursor: pointer;
+    
+            &:hover {
+              filter: invert(0.1);
+            }
+          }
+    
+          > .name-type {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+        }
+      }
+    }
+    
+    @media (max-width: 440px) {
+      .projects {
+        max-width: 100vw;
+        overflow-x: hidden; // Prevent horizontal scroll
+    
+        .project-header {
+          width: 92.5vw;
+          padding: 64px 16px 0;
+          height: 267px;
+    
+          > .project-heading {
+            width: 100%;
+            gap: 16px;
+            padding: 0px 0px 64px;
+    
+            > div {
+              font-size: 36px;
+            }
+          }
+        }
+    
+        .project-templates {
+          padding: 64px 16px 96px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 32px;
+          width: 92.5vw;
+          margin: auto;
+          flex-direction: column;
+    
+          .project-temp {
+            max-width: 92.5vw;
+    
+            img {
+              width: 88.5vw;
+              height: 225px;
+              border-radius: 24px;
+            }
+    
+            > .name-type {
+              width: 86.5vw;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    
+    @media (min-width:440px) and (max-width: 768px) {
+      .projects {
+        max-width: 100vw;
+        overflow-x: hidden; // Prevent horizontal scroll
+    
+        .project-header {
+          width: 100vw;
+          padding: 64px 16px 0;
+          height: 366.5px;
+    
+          > .project-heading {
+            width: 100%;
+            gap: 16px;
+            padding: 0px 0px 96px;
+    
+            > div {
+              font-size: 72px;
+            }
+          }
+        }
+    
+        .project-templates {
+        
+         
+          width: 100vw;
+          margin: auto;
+          flex-direction: column;
+    
+          .project-temp {
+            max-width: 93.5vw;
+    
+            img {
+              width: 93.5vw;
+              height: 405px;
+              border-radius: 24px;
+            }
+    
+            > .name-type {
+              width: 94.5vw;
+           
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+    @media (min-width:768px) and (max-width:1168px) {
+      .projects {
+        height: auto;
+        margin: auto;
+        width: 100vw;
+        overflow-x: hidden;
+      
+        > .project-header,
+        > .project-templates{
+          width: 100vw;
+          margin: auto;
+        }
+      
+        > .project-header {
+          padding: 96px 24px 0;
+          height: 377px;
+      
+          > .project-heading {
+            width: 92.5vw;
+            padding: 0 0 96px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            border-bottom: 1px solid rgba(173, 168, 159, 0.3);
+      
+            > div {
+              display: flex;
+              font-size: 72px;
+            }
+          }
+        }
+      
+        > .project-templates {
+          width: 100vw;
+          padding: 96px 24px 112px;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 32px;
+      
+          > .project-temp {
+            > img {
+              width: 44vw;
+              height: 306px;
+              border-radius: 24px;
+              cursor: pointer;
+      
+              &:hover {
+                filter: invert(0.1);
+              }
+            }
+      
+            > .name-type {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+    

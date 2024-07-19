@@ -1,0 +1,14 @@
+.app{
+  position: relative;
+  color: #fff;
+  max-width: 100vw;
+  background-color: black;
+  /* overflow: hidden; */
+}
+div {
+    outline: none   !important
+}
+
+div:focus {
+    background: none !important;
+}
