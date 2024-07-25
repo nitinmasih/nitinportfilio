@@ -7,8 +7,12 @@ const ContactInfo = () => {
   const { scrollY } = useViewportScroll();
 
   useEffect(() => {
+    let timeoutId;
     const scrollHandler = () => {
-      controls.start({ opacity: 1, y: 0 });
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        controls.start({ opacity: 1, y: 0 });
+      }, 100); // Debounce delay
     };
 
     const unsubscribe = scrollY.onChange(() => {
@@ -17,6 +21,7 @@ const ContactInfo = () => {
 
     // Ensure cleanup on unmount
     return () => {
+      clearTimeout(timeoutId);
       unsubscribe();
     };
   }, [controls, scrollY]);
@@ -27,7 +32,7 @@ const ContactInfo = () => {
         className="contact-heading"
         initial={{ opacity: 0, y: -50 }}
         animate={controls}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
       >
         <h1>
           LET'S<strong> CONNECT</strong>
@@ -37,7 +42,7 @@ const ContactInfo = () => {
         className="contact-image"
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ duration: 0.1, ease: "easeInOut", delay: 0 }}
+        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.2 }}
       >
         <div className="left-aside">
           <hr />
@@ -50,7 +55,7 @@ const ContactInfo = () => {
         className="contact-footer"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1 }}
+        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.4 }}
       >
         <div className="footer-left-aside">
           <p>We collaborate with ambitious brands and people worldwide.</p>
@@ -68,7 +73,7 @@ const ContactInfo = () => {
         className="created-by"
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ duration: 1, ease: "easeInOut", delay: 1.5 }}
+        transition={{ duration: 0.5, ease: "easeInOut", delay: 0.6 }}
       >
         Created by Nitin
       </motion.p>
