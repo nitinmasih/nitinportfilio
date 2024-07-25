@@ -1,236 +1,168 @@
 .experience {
-      display: flex;
-      flex-direction: column;
-      gap: 160px;
-      max-width: 1168px;
-      padding: 112px 24px;
-      margin: auto;
-      width: 1120px;
-    }
-    
-    .template-image-data {
-      display: flex;
-      gap: 75px;
-      margin: auto;
-      width: 1120px;
-     
-    }
-    
-    .templates-info {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      width: 1120px;
-      flex-direction: column;
-      margin: auto;
-    }
-    
-    .templates {
-      img {
-        width: 544px;
-        height: 306px;
-        border-radius: 10px;
-      }
-    
-      .template {
-    
-        height: 540px;
-      }
-    
-      .template-label {
-        display: flex;
-        justify-content: space-between;
-        padding: 5px 10px;
-        width: 544px;
-    
-        p {
-          color: #fff;
-          font-size: 20px;
-          font-weight: 400;
-    
-          span {
-            font-size: 18px;
-            color: goldenrod;
-          }
-        }
-      }
-    }
-    
-    .info {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+  max-width: 1168px;
+  padding: 112px 24px;
+  margin: auto;
+  width: 100%;
+}
+
+.template-image-data {
+  display: flex;
+  gap: 75px;
+  margin: auto;
+  width: 100%;
+}
+
+.templates-info {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  margin: auto;
+}
+
+.templates {
+  img {
+    width: 544px;
+    height: 306px;
+    border-radius: 10px;
+  }
+
+  .template {
+    height: 540px;
+  }
+
+  .template-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    width: 544px;
+
+    p {
       color: #fff;
-      width: 392px;
+      font-size: 20px;
+      font-weight: 400;
+
+      span {
+        font-size: 18px;
+        color: goldenrod;
+      }
     }
-    
-    .year {
-      margin-top: 4px;
-      width: 70px;
-      height: 30px;
-      background-color: #817b6f;
-      position: relative;
-    
+  }
+}
+
+.info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  color: #fff;
+  width: 392px;
+}
+
+.year {
+  margin-top: 4px;
+  width: 70px;
+  height: 30px;
+  background-color: #817b6f;
+  position: relative;
+
+  p {
+    font-size: 20px;
+    line-height: 140%;
+    letter-spacing: 0.01em;
+    font-weight: 400;
+    position: absolute;
+    top: 25px;
+    color: #000;
+    animation: slide-up 0.5s ease-in-out forwards;
+  }
+}
+
+.dash {
+  width: 65px;
+  height: 2px;
+  margin-top: 10px;
+  background-color: rgb(11, 158, 11);
+}
+
+.info-text {
+  width: 263px;
+  font-size: 20px;
+  color: #817b6f;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 440px) {
+  .experience {
+    padding: 112px 16px;
+  }
+
+  .template-image-data {
+    flex-direction: column;
+    gap: 25px;
+    width: 93.5vw;
+  }
+
+  .templates-info {
+    width: 93.5vw;
+  }
+
+  .templates {
+    img {
+      width: 92.5vw;
+      height: auto;
+    }
+
+    .template {
+      height: auto;
+    }
+
+    .template-label {
+      width: 100%;
       p {
         font-size: 20px;
-        line-height: 140%;
-        letter-spacing: 0.01em;
-        font-weight: 400;
-        position: absolute;
-        top: 25px;
-        color: #000;
-        animation: slide-up 0.5s ease-in-out forwards;
+
+        span {
+          font-size: 18px;
+        }
       }
     }
-    
-    .dash {
-      width: 65px;
-      height: 2px;
-      margin-top: 10px;
-      background-color: rgb(11, 158, 11);
+  }
+
+  .info {
+    display: none;
+  }
+}
+
+@media (min-width: 440px) and (max-width: 770px) {
+  .experience {
+    padding: 112px 16px;
+  }
+
+  .template-image-data {
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+  }
+
+  .templates-info {
+    width: 100%;
+    align-items: center;
+  }
+
+  .templates {
+    img {
+      width: 60.5vw;
+      height: auto;
     }
-    
-    .info-text {
-      width: 263px;
-      font-size: 20px;
-      color: #817b6f;
-      font-weight: 400;
-      line-height: 140%;
-      letter-spacing: 0.01em;
+
+    .template-label {
+      width: 60.5vw;
     }
-    
-    
-    
-    @media (max-width:440px) {
-      .experience {
-        display: flex;
-        flex-direction: column;
-        gap: 160px;
-        overflow: hidden;
-        padding: 112px 16px;
-        margin: auto;
-        width: 100vw
-      }
-      .template-image-data {
-        display: flex;
-        gap: 25px;
-        margin: auto;
-        width: 93.5vw;
-        flex-direction: column;
-       
-      }
-      .templates-info {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-        width: 93.5vw;
-        flex-direction: column;
-        margin: auto;
-      }
-      .templates {
-        
-        img {
-          width: 92.5vw;
-          height: 306px;
-          border-radius: 10px;
-        }
-      
-        .template {
-          padding-left: 0px;
-          height: 400px;
-        }
-      
-        .template-label {
-          display: flex;
-          justify-content: space-between;
-          padding: 5px 10px;
-          width: 100%;
-      
-          p {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 400;
-      
-            span {
-              font-size: 18px;
-              color: goldenrod;
-            }
-          }
-        }
-      }
-      
-      
-      .info{
-        display: none;
-      }
-    }
-    @media (min-width:440px) and (max-width:770px) {
-     
-      .experience {
-        display: flex;
-        flex-direction: column;
-        gap: 160px;
-       
-        padding: 112px 16px;
-        margin: auto;
-        width: 100vw
-      }
-      .template-image-data {
-        display: flex;
-        gap: 25px;
-        margin: auto;
-        width: 60.5vw;
-        flex-direction: row;
-        flex-wrap: wrap;
-    
-       
-      }
-      .templates-info {
-        display: flex;
-        gap: 16px;
-        align-items: flex-start;
-        width: 93.5vw;
-        // flex-direction: row;
-        margin: auto;
-        justify-content: center;
-        align-items: center;
-      }
-      .templates {
-       
-       
-        img {
-          width: 60.5vw;
-          height: 306px;
-          border-radius: 10px;
-          margin: auto;
-        }
-      
-        .template {
-          height: 400px;
-        }
-      
-        .template-label {
-          display: flex;
-          justify-content: space-between;
-          padding: 5px 10px;
-          width: 60.5vw;
-      
-          p {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 400;
-      
-            span {
-              font-size: 18px;
-              color: goldenrod;
-            }
-          }
-        }
-      }
-      
-      
-      // .info{
-      //   display: none;
-      // }
-    }
-    
+  }
+}

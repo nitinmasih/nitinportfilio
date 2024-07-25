@@ -1,149 +1,108 @@
 .trusted-collab {
-      align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 112px 24px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%; // Ensure full width on all devices
+  box-sizing: border-box; // Include padding in width calculation
+
+  > .heading {
+    text-align: center;
+    width: 100%; // Adjust to full width on smaller screens
+    max-width: 560px; // Limit max width on larger screens
+    height: auto; // Adjust height to content
+    margin-bottom: 64px; // Space below heading
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      line-height: 110%;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  .collaborator-logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+    width: 100%; // Adjust to full width on smaller screens
+    max-width: 1120px; // Limit max width on larger screens
+
+    .collaborator-item {
+      flex: 1 1 calc(50% - 28px); // Adjust flex basis
       display: flex;
-      flex: none;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      gap: 96px;
-      height: auto;
-      justify-content: flex-start;
-      width: 1168px;
-      overflow: hidden;
-      padding: 112px 24px;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+      margin: 15px;
+      border-radius: 24px;
+      cursor: pointer;
+      transition: filter 0.3s, border 0.3s; // Smooth hover transition
+
+      &:hover {
+        filter: invert(0.2);
+        border: 1px solid aliceblue;
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .trusted-collab {
+    padding: 96px 16px;
+
+    > .heading {
+      width: 80vw;
+      height: auto; // Adjust height to content
       margin: auto;
-      position: relative;
-    
-      > .heading {
-        width: 560px;
-        height: 105px;
-        text-align: center;
-    
-        h1 {
-          line-height: 110%;
-          letter-spacing: 0.01em;
-          font-size: 48px;
-          font-weight: 400;
-        }
-      }
-    
-      .collaborator-logo { /* corrected class name */
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 1120px;
-    
-        .collaborator-item {
-          flex: 1 1 calc(50% - 28px); /* Adjust the calculation based on your gap */
-          display: flex;
-          justify-content: center;
-          margin-bottom: 28px; /* Adjust as needed */
-        }
-    
-        img {
-          width: 250px;
-          height: 250px;
-          margin: 15px;
-          border-radius: 24px;
-          cursor: pointer;
-    
-          &:hover {
-            filter: invert(0.2);
-            border: 1px solid aliceblue;
-          }
-        }
+
+      h1 {
+        font-size: 36px;
       }
     }
-    
-    
-    @media (max-width: 440px) {
-      .trusted-collab {
-        width: 100vw;
-        align-items: center;
-        display: flex;
-        flex: none;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 64px;
-        height: auto;
-        justify-content: flex-start;
-        overflow: hidden;
-        padding: 96px 16px;
-        position: relative;
-        > .heading {
-          width: 80vw;
-          height: 80px;
-          margin: auto;
-          > h1 {
-            font-size: 36px;
-          }
-        }
-        .collaborator-logo {
-          width: 93vw;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 16px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 28px; // Adjust gap as needed
-      
-          .collaborator-item {
-            flex: 1 1 calc(50% - 28px); // Adjust the calculation based on your gap
-            display: flex;
-            justify-content: center;
-            margin-bottom: 28px; // Adjust as needed
-          }
-      
-    
-          
-        }
+
+    .collaborator-logo {
+      width: 93vw;
+      gap: 16px;
+      margin-top: 30px; // Adjusted gap for better spacing
+
+      .collaborator-item {
+        flex: 1 1 calc(50% - 16px); // Adjust flex basis for better fit
+        margin-bottom: 16px; // Adjusted margin
       }
     }
-    @media (min-width:440px) and (max-width: 770px) {
-      .trusted-collab {
-        width: 100vw;
-        align-items: center;
-        display: flex;
-        flex: none;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        gap: 64px;
-        height: auto;
-        justify-content: flex-start;
-        overflow: hidden;
-        padding: 96px 16px;
-        position: relative;
-        > .heading {
-          width: 80vw;
-          height: 80px;
-          margin: auto;
-          > h1 {
-            font-size: 36px;
-          }
-        }
-        .collaborator-logo {
-          width: 93vw;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 16px;
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 28px; // Adjust gap as needed
-      
-          .collaborator-item {
-            flex: 1 1 calc(50% - 28px); // Adjust the calculation based on your gap
-            display: flex;
-            justify-content: center;
-            margin-bottom: 28px; // Adjust as needed
-          }
-      
-    
-          
-        }
+  }
+}
+
+@media (max-width: 440px) {
+  .trusted-collab {
+    padding: 96px 16px;
+
+    > .heading {
+      width: 90vw; // Further adjustment for very small screens
+      height: auto;
+
+      h1 {
+        font-size: 28px; // Smaller font size for small screens
       }
     }
-    
+
+    .collaborator-logo {
+      width: 100%;
+      gap: 16px; // Keep consistent gap
+
+      .collaborator-item {
+        flex: 1 1 calc(100% - 16px); // Full width items
+        margin-bottom: 16px; // Consistent margin
+      }
+    }
+  }
+}

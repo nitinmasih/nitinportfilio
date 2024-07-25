@@ -24,7 +24,7 @@ const ArticleLink = () => {
               In the ever-evolving landscape of design, the concept of
               user-centricity stands as the cornerstone.
             </p>
-            <Link to={"/article:one"}>Read Article </Link>
+            <Link to={"/article/one"}>Read Article </Link>
           </div>
         </div>
         <div className="article-two">
@@ -38,7 +38,7 @@ const ArticleLink = () => {
               In the dynamic realm of UI/UX design, staying ahead of the curve
               is crucial.
             </p>
-            <Link to={"/article:two"}>Read Article </Link>
+            <Link to={"/article/two"}>Read Article </Link>
           </div>
         </div>
         <div className="article-three">

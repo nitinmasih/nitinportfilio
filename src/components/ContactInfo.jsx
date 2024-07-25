@@ -37,7 +37,7 @@ const ContactInfo = () => {
         className="contact-image"
         initial={{ opacity: 0 }}
         animate={controls}
-        transition={{ duration: 0.4, ease: "easeInOut", delay: 0 }}
+        transition={{ duration: 0.1, ease: "easeInOut", delay: 0 }}
       >
         <div className="left-aside">
           <hr />
