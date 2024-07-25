@@ -56,8 +56,8 @@ const ArticleLink = () => {
           </div>
         </div>
       </div>
-      <FrequentlyAskedQuestions />
-      <ContactInfo />
+     <div className="article-frequently" > <FrequentlyAskedQuestions /></div>
+      <div className="article-frequently" ><ContactInfo/></div>
     </div>
   );
 };
